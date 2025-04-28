@@ -9,7 +9,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': new URL('./src', import.meta.url).pathname, // 用這種方式
+      '@': '/src',  // 直接這樣寫（Vite會自己處理絕對路徑）
     },
   },
 })
