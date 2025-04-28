@@ -4,17 +4,17 @@
     <form class="max-w-md mx-auto bg-gray-100 p-6 rounded shadow" @submit.prevent="submitForm">
       <div class="mb-4">
         <label class="block mb-2">Name*</label>
-        <input type="text" name="name" v-model="name" required class="w-full p-2 border hover:border-sky-500 rounded" />
+        <input type="text" name="name" v-model="name" required class="w-full p-2 border focus:border-sky-500 focus:outline-1 focus:outline-sky-500  focus:invalid:border-pink-500 focus:invalid:outline-1 focus:invalid:outline-pink-500 rounded" />
       </div>
       <div class="mb-4">
         <label class="block mb-2">Email*</label>
         <input type="email" name="email" v-model="email" required
-          class="w-full p-2 border hover:border-sky-500 rounded" />
+          class="w-full p-2 border focus:border-sky-500 focus:outline-1 focus:outline-sky-500  focus:invalid:border-pink-500 focus:invalid:outline-1 focus:invalid:outline-pink-500  rounded" />
       </div>
       <div class="mb-4">
         <label class="block mb-2">Message*</label>
         <textarea name="message" v-model="message" required
-          class="w-full p-2 border h-32 hover:border-sky-500 rounded"></textarea>
+          class="w-full p-2 h-32 border focus:border-sky-500 focus:outline-1 focus:outline-sky-500  focus:invalid:border-pink-500 focus:invalid:outline-1 focus:invalid:outline-pink-500  rounded"></textarea>
       </div>
       <vue-hcaptcha class="my-3" sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" :reCaptchaCompat="false" @verify="onVerify"></vue-hcaptcha>
       <button type="submit" class="bg-sky-500 text-white px-4 py-2 rounded hover:bg-sky-400">
